@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="net.itempire.viewpagerweb.SingleView"
     android:orientation="vertical">
     <ScrollView
@@ -19,76 +19,99 @@
             android:id="@+id/layoutBoxesContainer">
 
             <!-- Box Pet Details start -->
-            <LinearLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:weightSum="3"
-                android:orientation="vertical"
-                android:id="@+id/layoutBoxPetDetails"
-                android:background="@drawable/list_row_bg">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
-                    android:src="@drawable/logo"
-                    android:background="#000"/>
+                android:layout_marginLeft="@dimen/card_margin_horizontal"
+                android:layout_marginRight="@dimen/card_margin_horizontal"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:padding="16dp"
-                    android:orientation="vertical">
-                    <TextView
+                    android:layout_height="match_parent"
+                    android:weightSum="3"
+                    android:orientation="vertical"
+                    android:id="@+id/layoutBoxPetDetails">
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Russian Cat"
-                        android:textSize="20sp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPetTitle"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Rs 15,000"
-                        android:textSize="20sp"
-                        android:textColor="#31A02F"
-                        android:id="@+id/tvPetPrice"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Gujrat, Punjab"
-                        android:textSize="16sp"
-                        android:textColor="#2d2d2d"
-                        android:id="@+id/tvPetLocation"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/logo"
+                        android:background="#000"/>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#CCCCCC"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="07:13 AM"
-                        android:textColor="#000"
-                        android:textSize="16sp"
-                        android:id="@+id/tvTime"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Russian Cat"
+                            android:textSize="20sp"
+                            android:textColor="#000"
+                            android:id="@+id/tvPetTitle"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 15,000"
+                            android:textSize="20sp"
+                            android:textColor="#31A02F"
+                            android:id="@+id/tvPetPrice"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gujrat, Punjab"
+                            android:textSize="16sp"
+                            android:textColor="#2d2d2d"
+                            android:id="@+id/tvPetLocation"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/colorSeparatorLine"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="07:13 AM"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:id="@+id/tvTime"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+                <!-- your layout stuff here -->
+
+            </android.support.v7.widget.CardView>
+
             <!-- Box Pet Details End -->
 
             <!-- Box Category start -->
-            <LinearLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:id="@+id/layoutBoxCategory"
-                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:padding="16dp"
-                android:background="@drawable/list_row_bg">
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layoutBoxCategory"
+                android:orientation="vertical"
+                android:padding="16dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -110,12 +133,12 @@
                         android:textStyle="bold"
                         android:textColor="#000"/>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#CCCCCC"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparatorLine"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,123 +150,144 @@
                     android:id="@+id/tvDetailsText"
                     android:text="White color Russian cate age 2 years for sale price Rs 15000"/>
             </LinearLayout>
+            </android.support.v7.widget.CardView>
             <!-- Box Category End -->
 
             <!-- Box User start -->
-            <LinearLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="16dp"
-                android:id="@+id/layoutBoxUser"
-                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/list_row_bg">
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                   <ImageView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:src="@android:drawable/ic_dialog_info"
-                       android:tint="@android:color/darker_gray"
-                       android:id="@+id/imgUserLogo"/>
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:id="@+id/layoutBoxUser"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@android:drawable/ic_dialog_info"
+                           android:tint="@android:color/darker_gray"
+                           android:id="@+id/imgUserLogo"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="Hamid Chaudhry"
+                            android:id="@+id/tvUserName"
+                            android:textSize="20sp"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/verified"
+                        android:layout_margin="15dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="45sp"
+                        android:src="@drawable/fb_login"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparatorLine"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:text="Hamid Chaudhry"
-                        android:id="@+id/tvUserName"
-                        android:textSize="20sp"
-                        android:textColor="#000"/>
+                        android:gravity="center"
+                        android:text="VIEW SELLER ADS"
+                        android:id="@+id/tvSellerAds"
+                        android:textSize="18sp" />
                 </LinearLayout>
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/verified"
-                    android:layout_margin="15dp"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="45sp"
-                    android:src="@drawable/fb_login"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#CCCCCC"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="VIEW SELLER ADS"
-                    android:id="@+id/tvSellerAds"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            </android.support.v7.widget.CardView>
             <!-- Box User End -->
 
             <!-- Box Safety Tips start -->
-            <LinearLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:id="@+id/layoutBoxSafetyTips"
-                android:orientation="vertical"
-                android:padding="16dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/list_row_bg">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="22sp"
-                    android:text="Safety tips!"
-                    android:textColor="#000"
-                    android:id="@+id/tvSafetyTip" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="* Meet the seller at a public place."
-                    android:id="@+id/tvTip1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="* Meet the seller at a public place."
-                    android:id="@+id/tvTip2"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="* Meet the seller at a public place."
-                    android:id="@+id/tvTip3"/>
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#CCCCCC"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:id="@+id/layoutBoxSafetyTips"
+                    android:orientation="vertical"
+                    android:padding="16dp">
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="Views: 9"
-                        android:id="@+id/tvAdViews"/>
+                        android:textSize="22sp"
+                        android:text="Safety tips!"
+                        android:textColor="#000"
+                        android:id="@+id/tvSafetyTip" />
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Ad Id: 1794"
-                        android:id="@+id/tvAdID"/>
+                        android:text="* Meet the seller at a public place."
+                        android:id="@+id/tvTip1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="* Meet the seller at a public place."
+                        android:id="@+id/tvTip2"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="* Meet the seller at a public place."
+                        android:id="@+id/tvTip3"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparatorLine"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Views: 9"
+                            android:id="@+id/tvAdViews"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Ad Id: 1794"
+                            android:id="@+id/tvAdID"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </android.support.v7.widget.CardView>
             <!-- Box Safety Tips End -->
 
         </LinearLayout>

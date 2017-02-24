@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorDivider">#BDBDBD</color>
-    <color name="colorRowLineBG">#0D303030</color>
+    <color name="colorSeparatorLine">#E6E6E6</color>
 </resources>
