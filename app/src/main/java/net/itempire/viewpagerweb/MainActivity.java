@@ -32,7 +32,13 @@ class mPagerAdapter extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
         if(position == 0){
-
+            return new SingleView();
+        }
+        if(position == 1){
+            return new SingleView();
+        }
+        if(position == 2){
+            return new SingleView();
         }
         return null;
     }
