@@ -17,16 +17,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/layoutBoxesContainer">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/logo"
+                android:background="#000"/>
 
             <!-- Box Pet Details start -->
             <android.support.v7.widget.CardView
                 android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
-                android:layout_marginLeft="@dimen/card_margin_horizontal"
-                android:layout_marginRight="@dimen/card_margin_horizontal"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 app:cardCornerRadius="0dp"
                 app:cardElevation="2dp"
                 app:cardPreventCornerOverlap="false"
@@ -34,60 +41,44 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical"
-                    android:id="@+id/layoutBoxPetDetails">
-                    <ImageView
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:src="@drawable/logo"
-                        android:background="#000"/>
+                        android:layout_height="wrap_content"
+                        android:text="Russian Cat"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:id="@+id/tvPetTitle"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 15,000"
+                        android:textSize="20sp"
+                        android:textColor="#31A02F"
+                        android:id="@+id/tvPetPrice"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gujrat, Punjab"
+                        android:textSize="16sp"
+                        android:textColor="#2d2d2d"
+                        android:id="@+id/tvPetLocation"/>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:padding="16dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Russian Cat"
-                            android:textSize="20sp"
-                            android:textColor="#000"
-                            android:id="@+id/tvPetTitle"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rs 15,000"
-                            android:textSize="20sp"
-                            android:textColor="#31A02F"
-                            android:id="@+id/tvPetPrice"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Gujrat, Punjab"
-                            android:textSize="16sp"
-                            android:textColor="#2d2d2d"
-                            android:id="@+id/tvPetLocation"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:background="@color/colorSeparatorLine"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="07:13 AM"
-                            android:textColor="#000"
-                            android:textSize="16sp"
-                            android:id="@+id/tvTime"/>
-                    </LinearLayout>
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparatorLine"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="07:13 AM"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:id="@+id/tvTime"/>
                 </LinearLayout>
-                <!-- your layout stuff here -->
-
             </android.support.v7.widget.CardView>
 
             <!-- Box Pet Details End -->
