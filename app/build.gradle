@@ -26,5 +26,10 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:support-v4:25.1.0'
+
+    //CardView library for nice looking card-boxes in the fragments.
     compile 'com.android.support:cardview-v7:25.1.0'
+
+    //Universal Image Loader for working with images
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
