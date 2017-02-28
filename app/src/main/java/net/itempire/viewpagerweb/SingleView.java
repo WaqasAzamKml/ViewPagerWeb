@@ -1,13 +1,12 @@
 package net.itempire.viewpagerweb;
 
-import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -22,7 +21,6 @@ public class SingleView extends Fragment {
     ImageView imgPetPhoto;
     ProgressBar pbImage;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +30,18 @@ public class SingleView extends Fragment {
         imgPetPhoto = (ImageView) v.findViewById(R.id.imgPetPhoto);
         pbImage = (ProgressBar) v.findViewById(R.id.pbImage);
 
-
+        imgPetPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity().getApplicationContext(), FullScreenImage.class);
+                imgPetPhoto.buildDrawingCache();
+                Bitmap imgPass = imgPetPhoto.getDrawingCache();
+                Bundle extras = new Bundle();
+                extras.putParcelable("petImage", imgPass);
+                i.putExtras(extras);
+                startActivity(i);
+            }
+        });
 
         String imgURL = "https://www.pakpets.com/uploads/ad_19393335700762.jpg";
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
