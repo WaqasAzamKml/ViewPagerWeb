@@ -73,6 +73,6 @@ public class SingleView extends Fragment {
             }
         }); // Default options will be used
         return v;
-    }
+    } // End of onCreateView
 
 }
