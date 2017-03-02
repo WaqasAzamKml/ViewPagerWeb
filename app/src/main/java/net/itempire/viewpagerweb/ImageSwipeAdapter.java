@@ -20,6 +20,9 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
  * Created by MIRSAAB on 3/1/2017.
  */
 
+/**
+ * IMPORTANT : This class is not being used anymore.
+ */
 public class ImageSwipeAdapter extends PagerAdapter {
     String[] imageURIStrings = {"https://www.pakpets.com/uploads/ad_19393335700762.jpg",
             "https://www.pakpets.com/uploads/ad_19663014620032.jpg",
