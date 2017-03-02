@@ -17,22 +17,27 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/layoutBoxesContainer">
-            <FrameLayout
+            <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imgPetPhoto"
+                android:layout_height="200dp"
+                android:id="@+id/vpPetImages"
+                />
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="2">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:id="@+id/imgPetPhoto"-->
 
-                    android:background="#000"/>
-                <ProgressBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/pbImage"/>
-            </FrameLayout>
+                    <!--android:background="#000"/>-->
+                <!--<ProgressBar-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:id="@+id/pbImage"/>-->
+            <!--</FrameLayout>-->
 
 
             <!-- Box Pet Details start -->
