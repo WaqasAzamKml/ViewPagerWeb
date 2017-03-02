@@ -27,6 +27,8 @@ public class ImageSwipeFragment extends Fragment{
     String[] imageURIStrings = {"https://www.pakpets.com/uploads/ad_19393335700762.jpg",
             "https://www.pakpets.com/uploads/ad_19663014620032.jpg",
             "https://www.pakpets.com/uploads/ad_19653112584040.jpg"};
+
+    //Get image path from drawable as string. This path can be used as a URL also.
 //    String[] imageURIStrings = {"drawable://"+R.drawable.pet_image_1,
 //        "drawable://"+R.drawable.pet_image_2,
 //        "drawable://"+R.drawable.pet_image_3};
